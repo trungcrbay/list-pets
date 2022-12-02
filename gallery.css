@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #dadada;
+    overflow: hidden;
+    /* Bên dưới đẩy khối Wrapper ra giữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.wrapper{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap; /* khiến hình ảnh nhảy xuống hàng =>>>>>>>*/
+    border: 1px solid #000;
+    justify-content: space-between;
+    
+
+}
+.image{
+    width: 22%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: 0.5s; /* cho trực tiếp vào thẻ img */
+}
+.image:hover img{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.gallery{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+.gallery-inside__image{
+    width: 700px;
+    height: 500px;
+    margin: 0 auto; /* dùng margin 0 auto vào phần tử trục tiếp */
+    display: block;
+    
+}
+.gallery-inside__icon{
+    color:rgba(255,255,255,0.8);
+    
+}
+.close{
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color:white;
+    cursor: pointer;
+}
+.control{
+    font-size: 35px;
+    position: absolute;
+}
+.control.left{
+    left: 10px;
+    cursor: pointer;
+}
+.control.right{
+    right: 10px;
+    cursor: pointer;
+}
+
+.gallery-inside{
+    width: 80%;
+    height: 80%;
+    
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+.hide{
+    display: none;
+}
